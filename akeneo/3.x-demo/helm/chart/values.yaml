@@ -1,7 +1,7 @@
 imagePullPolicy: Always
 
 akeneo:
-  version: 3.2
+  version: 4.0
   # Replicas >= 2 require a shared session storage (ie. DB, Redis)
   replicas: 1
   # Use an Ingress (requires an Ingress Controller)
@@ -21,13 +21,13 @@ akeneo:
   port: 8080
 
 mysql:
-  image: mysql:5.7
+  image: mysql:8.0.18
   storage:
     size: 20Gi
     class: standard
 
 elasticsearch:
-  image: elasticsearch:6.5.4
+  image: elasticsearch:7.5.1
   replicas: 2
   memory: 1g
   storage:
